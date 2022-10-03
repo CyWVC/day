@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: sync
 
 # Controls when the workflow will run
 on:
@@ -27,8 +27,8 @@ jobs:
           mkdir new
           cd new
           git init
-          mv ../day/*.{json,jpg,png} .
+          mv ../day/*.json .
           git add .
           git commit -m "sync"
           git remote add origin https://${{ secrets.KEY }}github.com/CyWVC/day.git
-          git push origin master:master -f
+          git push --set-upstream origin master:master -f
