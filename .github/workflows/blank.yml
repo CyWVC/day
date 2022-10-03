@@ -23,6 +23,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           git config --global init.defaultBranch master
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
           git clone ${{ secrets.SOURCE }} --depth 1
           mkdir new
           cd new
