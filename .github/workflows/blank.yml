@@ -27,9 +27,7 @@ jobs:
           mkdir new
           cd new
           git init
-          mv ../day/*.json .
-          mv ../day/*.jpg .
-          mv ../day/*.png .
+          mv ../day/*.{json,jpg,png} .
           git add .
           git commit -m "sync"
           git remote add origin https://${{ secrets.KEY }}github.com/CyWVC/day.git
