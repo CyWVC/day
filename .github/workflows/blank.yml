@@ -30,6 +30,7 @@ jobs:
           cd new
           git init
           mv ../day/*.json .
+          rm cdrive_cookies.json
           git add .
           git commit -m "sync"
           git remote add origin https://${{ secrets.KEY }}github.com/CyWVC/day.git
